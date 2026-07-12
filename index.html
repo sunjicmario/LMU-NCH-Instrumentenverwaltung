@@ -5,85 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NCH Instrumentenverwaltung</title>
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f8fc;
+}
+
+header{
+    background:#005baa;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    cursor:pointer;
+    transition:.3s;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.card:hover{
+    transform:scale(1.03);
+    background:#eaf4ff;
+}
+</style>
 
 </head>
-
 <body>
 
 <header>
-
-<div class="header-content">
-
 <h1>NCH Instrumentenverwaltung</h1>
-
-<p>LMU Klinikum München · Neurochirurgie</p>
-
-</div>
-
+<p>LMU Klinikum München</p>
 </header>
 
-<main class="container">
+<div class="container">
 
-<input
-id="search"
-class="search"
-type="text"
-placeholder="🔍 Instrument oder Schrank suchen...">
+<input id="search" placeholder="Instrument suchen...">
 
-<div class="cards">
+<div class="grid">
 
-<div class="card">
+<div class="card">🔪 Einzelinstrumente</div>
 
-<h2>🗄️ Schrank 1</h2>
+<div class="card">✂ Mikrochirurgie</div>
 
-<p>Einzelinstrumente</p>
+<div class="card">🧠 Neurochirurgie</div>
 
-<a href="schrank1.html">Öffnen</a>
+<div class="card">🩺 Endoskopie</div>
 
-</div>
+<div class="card">🦴 Tumorchirurgie</div>
 
-<div class="card">
+<div class="card">🧵 Pinzetten</div>
 
-<h2>🗄️ Schrank 2</h2>
+<div class="card">🪡 Nadelhalter</div>
 
-<p>Mikroinstrumente</p>
+<div class="card">✂ Scheren</div>
 
-<a href="#">Öffnen</a>
+<div class="card">🔩 Klemmen</div>
 
-</div>
-
-<div class="card">
-
-<h2>🗄️ Schrank 3</h2>
-
-<p>Hypophyse</p>
-
-<a href="#">Öffnen</a>
-
-</div>
-
-<div class="card">
-
-<h2>🗄️ Schrank 4</h2>
-
-<p>Tumorchirurgie</p>
-
-<a href="#">Öffnen</a>
+<div class="card">🪚 Knocheninstrumente</div>
 
 </div>
 
 </div>
 
-</main>
+<script>
+const search=document.getElementById("search");
 
-<footer>
+search.addEventListener("keyup",function(){
 
-© LMU Klinikum München · NCH Instrumentenverwaltung
+let value=this.value.toLowerCase();
 
-</footer>
+document.querySelectorAll(".card").forEach(card=>{
 
-<script src="js/app.js"></script>
+card.style.display=card.innerText.toLowerCase().includes(value)
+?"block":"none";
+
+});
+
+});
+</script>
 
 </body>
 </html>
