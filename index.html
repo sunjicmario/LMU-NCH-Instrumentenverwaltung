@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCH Instrumentenverwaltung</title>
-
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCH Instrumentenverwaltung</title>
+    
+    <!-- Poveznica na tvoj CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body><script src="js/script.js"></script>
+    <header>
+        <input type="text" id="search" placeholder="Instrument suchen...">
+        <h1>NCH Instrumentenverwaltung</h1>
+        <p>LMU Klinikum München</p>
+    </header>
 
+    <div class="container">
+        <h2>Schrank A</h2>
+        
+        <!-- Interaktivni prikaz ormara -->
+        <div class="cabinet-container">
+            <img src="js/img/schrankA.jpg" alt="Schrank A" class="cabinet-image">
 
-<header>
-    <input type="text" id="search" placeholder="Instrument suchen...">
-<h1>NCH Instrumentenverwaltung</h1>
-<p>LMU Klinikum München</p>
-</header>
+            <!-- ==================== 3 GORNJA FAHA (Plave košare) ==================== -->
+            <div class="compartment" data-shelf="1" style="top: 8%; left: 21%; width: 31%; height: 8%;"></div>
+            <div class="compartment" data-shelf="2" style="top: 22.5%; left: 21%; width: 31%; height: 8%;"></div>
+            <div class="compartment" data-shelf="3" style="top: 39%; left: 21%; width: 31%; height: 8%;"></div>
 
-<div class="container">
+            <!-- ==================== 6 LADICA (Donji dio ormara) ==================== -->
+            <!-- L1 (drawer-1) je podignut prema gore -->
+            <div class="compartment" data-shelf="drawer-1" style="top: 50%; left: 21%; width: 31%; height: 4%;"></div>
+            <!-- L2 (drawer-2) je spušten prema dolje -->
+            <div class="compartment" data-shelf="drawer-2" style="top: 57.5%; left: 21%; width: 31%; height: 4%;"></div>
+            <div class="compartment" data-shelf="drawer-3" style="top: 64%; left: 21%; width: 31%; height: 4%;"></div>
+            <div class="compartment" data-shelf="drawer-4" style="top: 70%; left: 21%; width: 31%; height: 4%;"></div>
+            <div class="compartment" data-shelf="drawer-5" style="top: 80%; left: 21%; width: 31%; height: 4%;"></div>
+            <div class="compartment" data-shelf="drawer-6" style="top: 88%; left: 21%; width: 31%; height: 4%;"></div>
+        </div>
 
-<h2>Schrank A</h2>
+        <!-- Ovdje će se dinamički prikazivati instrumenti iz odabranog faha/ladice -->
+        <div class="grid"></div>
+    </div>
 
-<div class="grid"></div>
-
-</div>
-
-<script src="js/script.js"></script>
-
+    <!-- Poveznica na tvoj JavaScript -->
+    <script src="js/script.js"></script> 
 </body>
 </html>

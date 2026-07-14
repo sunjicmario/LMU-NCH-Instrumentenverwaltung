@@ -44,6 +44,16 @@ async function loadInstrumente() {
         anzeigen(search.value);
     });
 
-}
+}// Čekamo da se cijeli HTML učita
+document.addEventListener("DOMContentLoaded", () => {
+    const compartments = document.querySelectorAll('.compartment');
+
+    compartments.forEach(compartment => {
+        compartment.addEventListener('click', (e) => {
+            const shelfId = e.target.getAttribute('data-shelf');
+            alert(`Kliknuo si na fah broj: ${shelfId}`);
+        });
+    });
+});
 
 loadInstrumente();

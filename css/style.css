@@ -47,4 +47,30 @@ h2{
 
 .card p{
     margin:8px 0;
+}/* Kontejner mora biti relativno pozicioniran kako bi se zone lijepile preko njega */
+.cabinet-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.cabinet-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Klikabilne zone */
+.compartment {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0); /* Prozirno u početku */
+    transition: background-color 0.2s ease, border 0.2s ease;
+    border: 2px solid transparent;
+}
+
+/* Kada prijeđeš mišem preko faha */
+.compartment:hover {
+    background-color: rgba(0, 120, 215, 0.2); /* Blago plava prozirna boja */
+    border: 2px solid #0078d7; /* Plavi obrub */
 }
