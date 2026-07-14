@@ -5,117 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NCH Instrumentenverwaltung</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f8fc;
-}
-
-header{
-    background:#005baa;
-    color:white;
-    padding:25px;
-    text-align:center;
-}
-
-header h1{
-    margin:0;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-
-input{
-    width:100%;
-    padding:14px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
-    margin-bottom:20px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    cursor:pointer;
-    transition:.3s;
-    text-align:center;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.card:hover{
-    transform:scale(1.03);
-    background:#eaf4ff;
-}
-</style>
-
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body><script src="js/script.js"></script>
+
 
 <header>
+    <input type="text" id="search" placeholder="Instrument suchen...">
 <h1>NCH Instrumentenverwaltung</h1>
 <p>LMU Klinikum München</p>
 </header>
 
 <div class="container">
 
-<input id="search" placeholder="Instrument suchen...">
+<h2>Schrank A</h2>
 
-<div class="grid">
-
-<div class="card">🔪 Einzelinstrumente</div>
-
-<div class="card">✂ Mikrochirurgie</div>
-
-<div class="card">🧠 Neurochirurgie</div>
-
-<div class="card">🩺 Endoskopie</div>
-
-<div class="card">🦴 Tumorchirurgie</div>
-
-<div class="card">🧵 Pinzetten</div>
-
-<div class="card">🪡 Nadelhalter</div>
-
-<div class="card">✂ Scheren</div>
-
-<div class="card">🔩 Klemmen</div>
-
-<div class="card">🪚 Knocheninstrumente</div>
+<div class="grid"></div>
 
 </div>
 
-</div>
-
-<script>
-const search=document.getElementById("search");
-
-search.addEventListener("keyup",function(){
-
-let value=this.value.toLowerCase();
-
-document.querySelectorAll(".card").forEach(card=>{
-
-card.style.display=card.innerText.toLowerCase().includes(value)
-?"block":"none";
-
-});
-
-});
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

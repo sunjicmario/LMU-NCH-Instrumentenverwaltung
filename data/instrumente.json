@@ -1,0 +1,54 @@
+[
+  {
+    "id":1,
+    "name":"Hamoclipsetzer",
+    "schrank":"Schrank A",
+    "fach":"Obere Ablage",
+    "anzahl":4,
+    "steril":"08.07.2026",
+    "gueltig":"08.08.2026",
+    "bild": "hamoclipsetzer.jpg"
+  },
+  {
+    "id":2,
+    "name":"Mono-Kabel",
+    "schrank":"Schrank A",
+    "fach":"Obere Ablage",
+    "anzahl":2,
+    "steril":"08.07.2026",
+    "gueltig":"08.08.2026",
+    "bild": "mono-kabel.jpg"
+  },
+  {
+    "id":3,
+    "name":"Bipo-Kabel",
+    "schrank":"Schrank A",
+    "fach":"Obere Ablage",
+    "anzahl":2,
+    "steril":"08.07.2026",
+    "gueltig":"08.08.2026",
+    "bild": "bipo-kabel.jpg"
+  },
+  {
+    "id":4,
+    "name":"Mikroscheren",
+    "schrank":"Schrank A",
+    "fach":"2. Fach",
+    "anzahl":12,
+    "steril":"08.07.2026",
+    "gueltig":"08.08.2026",
+    "bild": "mikroscheren.jpg"
+
+
+  },
+  {
+    "id":5,
+    "name":"Pinzetten",
+    "schrank":"Schrank A",
+    "fach":"3. Fach",
+    "anzahl":10,
+    "steril":"08.07.2026",
+    "gueltig":"08.08.2026",
+    "bild": "pinzetten.jpg"
+  }
+]
